@@ -7,11 +7,15 @@ namespace exemplo_poo.Models
 {
     public class Aluno : Pessoa
     {
+        public Aluno(string nome, int idade) : base(nome, idade)
+        {
+        }
+
         public double Nota { get; set; }
 
         public override void Apresentar()
         {
-            Console.WriteLine($"Olá Meu nome é {Nome}, tenho {Idade} e sou um aluno nota {Nota}");
+            Console.WriteLine($"Olá Meu nome é {Nome}, tenho {Idade}, e sou um aluno com media {Nota}");
         }
 
     }
